@@ -1,11 +1,28 @@
-package juego;
+package cat;
 import java.io.*;
-  public static void main(Strings[]args) throws IOException{
-    String posicion[][] = new String[3][3];
-    BufferedReader input = new BufferedReader(new InputStreamReader(system.in));
-    for(int i=0;i<posicion[0].lenght;i++){
-      for(j=0;j<posicion[0][0].length;j++){
-        posicion[i][j]="-";
-      }
-      }
-  }
+
+public class juego {
+	public static void main(String[]arg) throws IOException{
+		int matriz[][] = new int[3][3];
+		BufferedReader input = new BufferedReader (new InputStreamReader(System.in));
+		int k=1;
+		for(int i=0;i<matriz.length;i++) {
+			for(int j=0;j<matriz[0].length;j++) {
+				matriz[i][j] = k;
+				k++;
+			}
+		}
+		k = 0;
+		for(int i=0;i<matriz.length;i++) {
+			for(int j=0;j<matriz[0].length;j++) {
+				System.out.print(matriz[i][j]);
+				k++;
+				if(k%3==0) {
+					System.out.println();
+				}
+			}
+		}
+		
+	}
+
+}
